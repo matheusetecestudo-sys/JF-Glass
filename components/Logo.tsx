@@ -5,48 +5,57 @@ interface LogoProps {
     className?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ variant = 'dark', className = "" }) => {
+const Logo: React.FC<LogoProps> = ({ variant = 'light', className = "" }) => {
     const primaryBlue = "#4A7EBB";
     const lightBlue = "#72B5D9";
-    const textColor = variant === 'light' ? '#000000' : '#FFFFFF';
-    const subtextColor = variant === 'light' ? '#4A7EBB' : '#FFFFFF';
+    const textColor = variant === 'light' ? '#0F172A' : '#FFFFFF';
 
     return (
         <svg
-            viewBox="0 0 300 100"
+            viewBox="0 0 320 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={className}
+            preserveAspectRatio="xMinYMid meet"
         >
-            {/* JF Icon */}
-            <path d="M20 20H80V35H55V80C55 85 50 90 40 90H20V75H35V35H20V20Z" fill={primaryBlue} />
-            <path d="M65 10H140V25H100V45H130V60H100V90H80V10Z" fill={lightBlue} />
+            {/* JF Icon - Geometric & Minimalist */}
+            <g transform="translate(0, 5)">
+                {/* J Part */}
+                <path
+                    d="M15 10H55V22H32V55C32 62 28 65 20 65H5V53H18V22H15V10Z"
+                    fill={primaryBlue}
+                />
+                {/* F Part - Elegant Offset */}
+                <path
+                    d="M48 5H95V17H65V32H90V44H65V65H53V5Z"
+                    fill={lightBlue}
+                    style={{ mixBlendMode: 'multiply', opacity: 0.9 }}
+                />
+            </g>
 
-            {/* GLASS Text */}
-            <text
-                x="145"
-                y="65"
-                fontFamily="Inter, sans-serif"
-                fontSize="52"
-                fontWeight="900"
-                fill={variant === 'light' ? primaryBlue : '#FFFFFF'}
-                style={{ letterSpacing: '-0.02em' }}
-            >
-                GLASS
-            </text>
-
-            {/* VIDRAÇARIA Subtext */}
-            <text
-                x="147"
-                y="88"
-                fontFamily="Inter, sans-serif"
-                fontSize="14"
-                fontWeight="700"
-                fill={subtextColor}
-                style={{ letterSpacing: '0.45em' }}
-            >
-                VIDRAÇARIA
-            </text>
+            {/* Brand Text */}
+            <g transform="translate(110, 48)">
+                <text
+                    fontFamily="Inter, system-ui, sans-serif"
+                    fontSize="42"
+                    fontWeight="900"
+                    fill={textColor}
+                    style={{ letterSpacing: '-0.03em' }}
+                >
+                    GLASS
+                </text>
+                <text
+                    y="22"
+                    x="2"
+                    fontFamily="Inter, system-ui, sans-serif"
+                    fontSize="11"
+                    fontWeight="700"
+                    fill={variant === 'light' ? primaryBlue : '#FFFFFF'}
+                    style={{ letterSpacing: '0.62em', opacity: 0.8 }}
+                >
+                    VIDRAÇARIA
+                </text>
+            </g>
         </svg>
     );
 };
