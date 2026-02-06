@@ -39,10 +39,10 @@ const HowItWorks: React.FC = () => {
             <div className="container-precision">
                 <div className="text-center mb-10 md:mb-10 md:mb-16 reveal active">
 
-                    <h2 className="text-3xl md:text-5xl font-black !text-brand-accent mb-6 tracking-tight">
-                        Orçamento em <span className="text-slate-400 font-medium italic">3 passos simples.</span>
+                    <h2 className="text-3xl md:text-5xl font-black !text-brand-primary mb-6 tracking-tight">
+                        Orçamento em <span className="text-brand-accent font-medium italic">3 passos simples.</span>
                     </h2>
-                    <p className="text-slate-900 font-medium max-w-lg mx-auto">Praticidade e rapidez para você tirar o seu projeto do papel hoje mesmo.</p>
+                    <p className="text-black font-medium max-w-lg mx-auto">Praticidade e rapidez para você tirar o seu projeto do papel hoje mesmo.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 relative">
@@ -51,14 +51,14 @@ const HowItWorks: React.FC = () => {
 
                     {steps.map((step, i) => (
                         <div key={i} className="relative z-10 flex flex-col items-center text-center bg-white p-6 rounded-3xl group">
-                            <div className="w-20 h-20 bg-brand-accent text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-brand-accent/20 group-hover:scale-110 transition-transform duration-500 relative">
+                            <div className="w-20 h-20 bg-brand-primary text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-500 relative">
                                 {step.icon}
-                                <span className="absolute -top-3 -right-3 w-8 h-8 bg-slate-900 border-4 border-white text-white rounded-full text-[10px] font-black flex items-center justify-center">
+                                <span className="absolute -top-3 -right-3 w-8 h-8 bg-black border-4 border-white text-white rounded-full text-[10px] font-black flex items-center justify-center">
                                     {step.number}
                                 </span>
                             </div>
-                            <h3 className="text-xl font-black !text-brand-accent mb-4 tracking-tight">{step.title}</h3>
-                            <p className="!text-slate-900 font-medium leading-relaxed text-sm">
+                            <h3 className="text-xl font-black !text-brand-primary mb-4 tracking-tight">{step.title}</h3>
+                            <p className="!text-black font-medium leading-relaxed text-sm">
                                 {step.description}
                             </p>
                         </div>

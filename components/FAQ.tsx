@@ -5,12 +5,12 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-8 md:py-10 bg-slate-50 font-inter">
+    <section className="py-8 md:py-10 bg-white font-inter">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12 reveal active">
-          <h2 className="text-4xl md:text-5xl font-black !text-brand-accent mb-8 tracking-tight leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl font-black !text-brand-primary mb-8 tracking-tight leading-[1.1]">
             Suporte e <br />
-            <span className="!text-slate-400 font-medium">Esclarecimentos.</span>
+            <span className="text-brand-accent font-medium italic">Esclarecimentos.</span>
           </h2>
         </div>
 
@@ -25,7 +25,7 @@ const FAQ: React.FC = () => {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex flex-col items-center justify-center p-4 md:p-10 text-center group relative"
               >
-                <span className={`text-lg md:text-xl font-bold transition-colors duration-300 ${openIndex === index ? 'text-brand-accent' : 'text-slate-900 group-hover:text-brand-accent'}`}>
+                <span className={`text-lg md:text-xl font-bold transition-colors duration-300 ${openIndex === index ? 'text-brand-primary' : 'text-slate-900 group-hover:text-brand-primary'}`}>
                   {item.question}
                 </span>
                 <div className={`mt-6 w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-brand-primary text-white rotate-180 shadow-lg' : 'bg-slate-50 text-slate-300'}`}>
@@ -34,7 +34,7 @@ const FAQ: React.FC = () => {
               </button>
 
               <div className={`transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
-                <div className="p-4 md:p-10 pt-0 text-slate-900 text-lg font-medium leading-relaxed border-t border-slate-50/50 text-center">
+                <div className="p-4 md:p-10 pt-0 text-black text-lg font-medium leading-relaxed border-t border-slate-50/50 text-center">
                   {item.answer}
                 </div>
               </div>

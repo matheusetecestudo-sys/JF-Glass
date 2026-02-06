@@ -33,15 +33,15 @@ const Differentiators: React.FC = () => {
     ];
 
     return (
-        <section className="py-12 md:py-20 bg-slate-50 relative overflow-hidden">
+        <section className="py-12 md:py-20 bg-white relative overflow-hidden">
             <div className="container-precision text-center">
                 <header className="mb-6 md:mb-20 reveal active max-w-2xl mx-auto">
 
-                    <h2 className="text-4xl md:text-6xl font-black !text-brand-accent mb-8 tracking-tight leading-tight">
+                    <h2 className="text-4xl md:text-6xl font-black !text-brand-primary mb-8 tracking-tight leading-tight">
                         Por que escolher <br />
-                        <span className="text-slate-400 font-medium italic">a nossa engenharia?</span>
+                        <span className="text-brand-accent font-medium italic">a nossa engenharia?</span>
                     </h2>
-                    <p className="text-lg md:text-xl !text-slate-900 font-medium leading-relaxed max-w-xl mx-auto">
+                    <p className="text-lg md:text-xl !text-black font-medium leading-relaxed max-w-xl mx-auto">
                         Combinamos a precisão técnica da ABNT com um atendimento focado na sua paz de espírito.
                     </p>
                 </header>
@@ -53,11 +53,11 @@ const Differentiators: React.FC = () => {
                             className="reveal active group flex flex-col items-center bg-white p-10 rounded-[2.5rem] border border-slate-100 hover:border-brand-accent/20 hover:shadow-2xl transition-all duration-500"
                             style={{ transitionDelay: `${i * 100}ms` }}
                         >
-                            <div className="w-20 h-20 bg-brand-accent/5 rounded-3xl flex items-center justify-center text-brand-accent mb-8 group-hover:scale-110 group-hover:bg-brand-accent group-hover:text-white transition-all duration-500 shadow-sm">
+                            <div className="w-20 h-20 bg-brand-primary/5 rounded-3xl flex items-center justify-center text-brand-primary mb-8 group-hover:scale-110 group-hover:bg-brand-primary group-hover:text-white transition-all duration-500 shadow-sm">
                                 {d.icon}
                             </div>
-                            <h3 className="text-xl font-bold !text-brand-accent mb-4 tracking-tight">{d.title}</h3>
-                            <p className="!text-slate-900 font-medium leading-relaxed text-sm md:text-base">
+                            <h3 className="text-xl font-bold !text-brand-primary mb-4 tracking-tight">{d.title}</h3>
+                            <p className="!text-black font-medium leading-relaxed text-sm md:text-base">
                                 {d.description}
                             </p>
                         </div>
