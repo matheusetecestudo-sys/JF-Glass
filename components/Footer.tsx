@@ -1,5 +1,6 @@
 import React from 'react';
 import { getWhatsAppLink, WHATSAPP_LINK, CLIENT_CONFIG, ALL_SERVICES, getServiceWhatsAppLink } from '../constants';
+import Logo from './Logo';
 
 interface FooterProps {
   onNavigate?: (page: string) => void;
@@ -20,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               onClick={() => onNavigate?.('home')}
               className="group flex flex-col items-center gap-1 focus:outline-none"
             >
-              <img src="/images/logo.jpg" alt="JF Glass" className="h-16 md:h-24 w-auto object-contain" />
+              <Logo className="h-16 md:h-20 w-auto" />
             </button>
             <p className="text-base leading-relaxed max-w-xs !text-slate-200 mx-auto font-medium">
               Especialistas em engenharia vidreira de alto desempenho. Precisão técnica em box, espelhos e projetos sob medida em {CLIENT_CONFIG.city}.

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getWhatsAppLink } from '../constants';
+import Logo from './Logo';
 
 interface NavbarProps {
   onNavigate: (page: string) => void;
@@ -41,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             className="flex items-center gap-3 md:gap-4 group focus:outline-none"
             aria-label="Ir para a página inicial"
           >
-            <img src="/images/logo.jpg" alt="JF Glass" className="h-10 md:h-16 w-auto object-contain" />
+            <Logo className="h-10 md:h-14 w-auto" />
           </button>
 
           <nav className="hidden md:flex items-center gap-8 lg:gap-12">

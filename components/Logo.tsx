@@ -1,53 +1,59 @@
 import React from 'react';
 
 interface LogoProps {
-    variant?: 'light' | 'dark';
     className?: string;
+    showBackground?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ variant = 'light', className = "" }) => {
+const Logo: React.FC<LogoProps> = ({ className = "", showBackground = true }) => {
     const darkBlue = "#4A7EBB";
     const lightBlue = "#72B5D9";
-    const textColor = "#1E40AF"; // Azul escuro do texto GLASS na imagem
+    const footerDark = "#020617"; // slate-950
 
     return (
         <svg
-            viewBox="0 0 380 100"
+            viewBox="0 0 400 120"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={className}
         >
-            {/* J - Dark Blue Block */}
-            <path d="M10 20H70V35H45V80C45 85 40 90 30 90H10V75H30V35H10V20Z" fill={darkBlue} />
+            {showBackground && (
+                <rect width="400" height="120" rx="8" fill={footerDark} />
+            )}
 
-            {/* F - Light Blue Block */}
-            <path d="M75 20H140V35H90V53H130V68H90V90H75V20Z" fill={lightBlue} />
+            <g transform="translate(20, 20)">
+                {/* J - Dark Blue */}
+                <path d="M10 10H50V25H35V65C35 70 30 75 20 75H0V60H20V25H0V10H10Z" fill={darkBlue} />
 
-            {/* GLASS - Bold Sans */}
-            <text
-                x="150"
-                y="75"
-                fontFamily="Arial, sans-serif"
-                fontSize="65"
-                fontWeight="bold"
-                fill={textColor}
-                style={{ letterSpacing: '-0.02em' }}
-            >
-                GLASS
-            </text>
+                {/* F - Light Blue */}
+                <path d="M45 10H95V25H60V40H90V55H60V80H45V10Z" fill={lightBlue} />
 
-            {/* VIDRAÇARIA - Spaced */}
-            <text
-                x="152"
-                y="95"
-                fontFamily="Arial, sans-serif"
-                fontSize="16"
-                fontWeight="bold"
-                fill={textColor}
-                style={{ letterSpacing: '0.45em' }}
-            >
-                VIDRAÇARIA
-            </text>
+                {/* GLASS */}
+                <text
+                    x="105"
+                    y="65"
+                    fontFamily="Inter, sans-serif"
+                    fontSize="60"
+                    fontWeight="900"
+                    fill={darkBlue}
+                    style={{ letterSpacing: '-0.02em' }}
+                >
+                    GLASS
+                </text>
+
+                {/* VIDRAÇARIA */}
+                <text
+                    x="105"
+                    y="85"
+                    fontFamily="Inter, sans-serif"
+                    fontSize="18"
+                    fontWeight="800"
+                    fill="#FFFFFF"
+                    style={{ letterSpacing: '0.45em' }}
+                >
+                    VIDRAÇARIA
+                </text>
+            </g>
         </svg>
     );
 };
