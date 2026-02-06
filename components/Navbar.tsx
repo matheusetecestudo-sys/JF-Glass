@@ -42,12 +42,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             className="flex items-center gap-3 md:gap-4 group focus:outline-none"
             aria-label="Ir para a página inicial"
           >
-            <div className={`w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-white font-black text-lg transition-all duration-500 shadow-lg ${scrolled ? 'bg-brand-accent' : 'bg-brand-accent/90 group-hover:bg-brand-accent'}`}>
-              H
-            </div>
-            <div className="flex flex-col items-start leading-tight">
-              <span className="text-sm md:text-base font-black tracking-tighter text-slate-900 uppercase">Home glass</span>
-              <span className="text-[8px] md:text-[9px] font-bold text-slate-900 uppercase tracking-widest">esquadrias</span>
+            <div className="h-10 md:h-12 flex items-center">
+              <img 
+                src={scrolled ? "/images/logo-light.png" : "/images/logo-dark.png"} 
+                alt="JF Glass Vidraçaria" 
+                className="h-full w-auto object-contain transition-all duration-500"
+              />
             </div>
           </button>
 

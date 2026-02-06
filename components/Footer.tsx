@@ -20,8 +20,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               onClick={() => onNavigate?.('home')}
               className="group flex flex-col items-center gap-1 focus:outline-none"
             >
-              <span className="text-2xl font-black text-white tracking-tighter leading-none">Home glass</span>
-              <span className="text-brand-accent font-bold text-[10px] tracking-[0.3em] uppercase">esquadrias</span>
+              <img
+                src="/images/logo-dark.png"
+                alt="JF Glass Vidraçaria"
+                className="h-16 w-auto object-contain"
+              />
             </button>
             <p className="text-base leading-relaxed max-w-xs !text-slate-200 mx-auto font-medium">
               Especialistas em engenharia vidreira de alto desempenho. Precisão técnica em box, espelhos e projetos sob medida em {CLIENT_CONFIG.city}.
@@ -85,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/5 flex flex-col items-center gap-8 text-center">
           <p className="text-[11px] font-medium !text-slate-400">
-            © {currentYear} Home glass esquadrias — Engenharia de vidros em {CLIENT_CONFIG.city}. Todos os direitos reservados.
+            © {currentYear} {CLIENT_CONFIG.name} — Engenharia de vidros em {CLIENT_CONFIG.city}. Todos os direitos reservados.
           </p>
           <div className="flex gap-8 opacity-20 grayscale hover:opacity-100 hover:grayscale-0 transition-all items-center justify-center">
             <div className="text-[10px] font-black tracking-widest">ABNT NBR</div>

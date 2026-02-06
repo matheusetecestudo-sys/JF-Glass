@@ -1,4 +1,4 @@
-# Home glass esquadrias - Engenharia e Design em Vidros
+# JF Glass Vidraçaria - Engenharia e Design em Vidros
 
 Site premium desenvolvido com padrões de UX/UI 2026, focado em alta conversão para WhatsApp e performance técnica superior.
 

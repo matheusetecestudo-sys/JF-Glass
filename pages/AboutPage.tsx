@@ -44,7 +44,7 @@ const AboutPage: React.FC = () => {
               </h2>
               <div className="space-y-10 text-xl md:text-2xl !text-slate-900 font-medium leading-relaxed max-w-3xl mx-auto text-center">
                 <p>
-                  Home glass esquadrias nasceu da necessidade de um mercado que pedia mais que apenas instalação; pedia inteligência técnica aplicada ao vidro e compromisso absoluto com o resultado final.
+                  {CLIENT_CONFIG.name} nasceu da necessidade de um mercado que pedia mais que apenas instalação; pedia inteligência técnica aplicada ao vidro e compromisso absoluto com o resultado final.
                 </p>
                 <p>
                   Hoje, com mais de 4.500 projetos realizados, nossa marca é sinônimo de segurança e acabamento fino para arquitetos, construtores e proprietários que buscam a perfeição em cada detalhe.
