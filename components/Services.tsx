@@ -9,11 +9,11 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
         <div className="grid lg:grid-cols-12 gap-8 mb-10 md:mb-10 md:mb-16 reveal active items-center text-center">
           <div className="lg:col-span-12">
 
-            <h2 className="text-4xl md:text-6xl font-black !text-brand-accent leading-[1] mb-8 tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-black !text-brand-primary leading-[1] mb-8 tracking-tight">
               Serviços <br />
-              <span className="text-slate-400 font-medium italic">Mais Procurados.</span>
+              <span className="text-brand-accent font-medium italic">Mais Procurados.</span>
             </h2>
-            <p className="!text-slate-900 font-medium text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-8">
+            <p className="!text-black font-medium text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-8">
               Confira as soluções com maior demanda e excelência técnica garantida para seu ambiente.
             </p>
             <div className="flex justify-center">
@@ -51,11 +51,11 @@ const Services: React.FC<{ onNavigate?: (page: string) => void }> = ({ onNavigat
 
                 <div className="p-8 md:p-12 flex flex-col flex-grow items-center text-center">
                   <div className="flex flex-col items-center gap-4 mb-6">
-                    <span className="text-2xl font-black text-slate-400 group-hover:!text-brand-accent transition-colors italic leading-none">0{index + 1}</span>
-                    <h3 className="text-2xl md:text-3xl font-black !text-brand-accent leading-none">{service.title}</h3>
+                    <span className="text-2xl font-black text-brand-accent group-hover:text-brand-primary transition-colors italic leading-none">0{index + 1}</span>
+                    <h3 className="text-2xl md:text-3xl font-black !text-brand-primary leading-none">{service.title}</h3>
                   </div>
 
-                  <p className="!text-slate-900 text-lg font-medium leading-relaxed mb-10 flex-grow">
+                  <p className="!text-black text-lg font-medium leading-relaxed mb-10 flex-grow">
                     {service.description}
                   </p>
 

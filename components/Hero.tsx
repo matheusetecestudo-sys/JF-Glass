@@ -3,7 +3,7 @@ import { getWhatsAppLink, WHATSAPP_LINK, CTA_TEXT } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-8 md:pt-40 md:pb-24 bg-slate-50 overflow-hidden">
+    <section className="relative pt-32 pb-8 md:pt-40 md:pb-24 bg-white overflow-hidden">
       {/* Elementos Decorativos de Fundo */}
       <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[120%] bg-white skew-x-[-12deg] z-0 pointer-events-none hidden md:block" />
 
@@ -13,12 +13,12 @@ const Hero: React.FC = () => {
           <div className="lg:col-span-12 reveal active text-center flex flex-col items-center">
 
 
-            <h1 className="text-3xl md:text-7xl lg:text-[92px] font-black !text-brand-accent leading-[1.1] md:leading-[0.85] mb-6 md:mb-8 tracking-tight text-center">
+            <h1 className="text-3xl md:text-7xl lg:text-[92px] font-black !text-brand-primary leading-[1.1] md:leading-[0.85] mb-6 md:mb-8 tracking-tight text-center">
               A Engenharia do <br className="hidden md:block" />
-              <span className="text-slate-400 font-medium italic whitespace-nowrap">Vidro Moderno.</span>
+              <span className="text-brand-accent font-medium italic whitespace-nowrap">Vidro Moderno.</span>
             </h1>
 
-            <p className="text-lg md:text-2xl !text-slate-900 font-medium leading-relaxed max-w-2xl mb-10 md:mb-10 md:mb-16 mx-auto text-center">
+            <p className="text-lg md:text-2xl !text-black font-medium leading-relaxed max-w-2xl mb-10 md:mb-10 md:mb-16 mx-auto text-center">
               Projetos sob medida em vidros e espelhos com instalação técnica imediata e acabamento padrão arquitetura de alto luxo.
             </p>
 
