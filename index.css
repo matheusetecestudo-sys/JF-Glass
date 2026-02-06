@@ -151,12 +151,12 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2563eb;
+  background: #4A7EBB;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1e40af;
+  background: #1E40AF;
 }
 
 #app-loader {
