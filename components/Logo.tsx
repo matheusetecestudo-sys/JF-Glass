@@ -7,9 +7,21 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ className = "", variant = 'header' }) => {
     const isFooter = variant === 'footer';
+
+    // Para o cabeçalho, usamos a imagem física logo.jpg conforme solicitado
+    if (!isFooter) {
+        return (
+            <img
+                src="/images/logo.jpg"
+                alt="JF Glass Vidraçaria"
+                className={`${className} object-contain`}
+            />
+        );
+    }
+
+    // Para o rodapé, mantemos o SVG para garantir que o texto "VIDRAÇARIA" seja branco
     const primaryBlue = "#4A7EBB";
     const accentBlue = "#72B5D9";
-    const subtextColor = isFooter ? "#FFFFFF" : "#000000";
 
     return (
         <svg
@@ -44,7 +56,7 @@ const Logo: React.FC<LogoProps> = ({ className = "", variant = 'header' }) => {
                     fontFamily="Inter, sans-serif"
                     fontSize="18"
                     fontWeight="800"
-                    fill={subtextColor}
+                    fill="#FFFFFF"
                     style={{ letterSpacing: '0.42em' }}
                 >
                     VIDRAÇARIA
