@@ -2,53 +2,49 @@ import React from 'react';
 
 interface LogoProps {
     className?: string;
-    showBackground?: boolean;
+    variant?: 'header' | 'footer';
 }
 
-const Logo: React.FC<LogoProps> = ({ className = "", showBackground = true }) => {
-    const darkBlue = "#4A7EBB";
-    const lightBlue = "#72B5D9";
-    const footerDark = "#020617"; // slate-950
+const Logo: React.FC<LogoProps> = ({ className = "", variant = 'header' }) => {
+    const isFooter = variant === 'footer';
+    const primaryBlue = "#4A7EBB";
+    const accentBlue = "#72B5D9";
 
     return (
         <svg
-            viewBox="0 0 400 120"
+            viewBox="0 0 380 100"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={className}
         >
-            {showBackground && (
-                <rect width="400" height="120" rx="8" fill={footerDark} />
-            )}
-
-            <g transform="translate(20, 20)">
+            <g transform="translate(15, 10)">
                 {/* J - Dark Blue */}
-                <path d="M10 10H50V25H35V65C35 70 30 75 20 75H0V60H20V25H0V10H10Z" fill={darkBlue} />
+                <path d="M15 10H45V20H30V50C30 55 25 60 15 60H0V45H15V20H0V10H15Z" fill={primaryBlue} />
 
                 {/* F - Light Blue */}
-                <path d="M45 10H95V25H60V40H90V55H60V80H45V10Z" fill={lightBlue} />
+                <path d="M40 10H85V20H55V35H75V45H55V70H40V10Z" fill={accentBlue} />
 
                 {/* GLASS */}
                 <text
-                    x="105"
-                    y="65"
+                    x="95"
+                    y="52"
                     fontFamily="Inter, sans-serif"
-                    fontSize="60"
+                    fontSize="54"
                     fontWeight="900"
-                    fill={darkBlue}
-                    style={{ letterSpacing: '-0.02em' }}
+                    fill={primaryBlue}
+                    style={{ letterSpacing: '-0.04em' }}
                 >
                     GLASS
                 </text>
 
                 {/* VIDRAÇARIA */}
                 <text
-                    x="105"
-                    y="85"
+                    x="95"
+                    y="72"
                     fontFamily="Inter, sans-serif"
-                    fontSize="18"
+                    fontSize="15"
                     fontWeight="800"
-                    fill="#FFFFFF"
+                    fill={isFooter ? "#FFFFFF" : "#000000"}
                     style={{ letterSpacing: '0.45em' }}
                 >
                     VIDRAÇARIA
