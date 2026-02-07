@@ -19,10 +19,10 @@ const Logo: React.FC<LogoProps> = ({ className = "", variant = 'header' }) => {
         );
     }
 
-    // Para o rodapé, usamos a imagem logodark.jpg.jpg (arquivo físico enviado)
+    // Para o rodapé, usamos a imagem logotransoarente.png (conforme enviado via GitHub)
     return (
         <img
-            src="/images/logodark.jpg.jpg"
+            src="/images/logotransoarente.png"
             alt="JF Glass Vidraçaria"
             className={`${className} object-contain`}
         />
