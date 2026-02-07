@@ -4,7 +4,7 @@
   --color-brand-primary: #4A7EBB;
   --color-brand-secondary: #000000;
   --color-brand-accent: #72B5D9;
-  --color-brand-whatsapp: #4A7EBB;
+  --color-brand-whatsapp: #25D366;
   --color-brand-light: #ffffff;
 
   --color-neutral-main: #000000;
@@ -16,7 +16,7 @@
 :root {
   --brand-primary: #4A7EBB;
   --brand-accent: #72B5D9;
-  --brand-whatsapp: #4A7EBB;
+  --brand-whatsapp: #25D366;
   --glass-bg: rgba(255, 255, 255, 0.8);
   --glass-border: rgba(74, 126, 187, 0.1);
   --transition-main: 200ms cubic-bezier(0.16, 1, 0.3, 1);
